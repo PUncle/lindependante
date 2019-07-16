@@ -1,3 +1,5 @@
+import { content } from './assets/content.js'
+
 export default {
   mode: 'universal',
   /*
@@ -38,10 +40,17 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/pwa', '@nuxtjs/eslint-module'],
+  modules: ['@nuxtjs/pwa', '@nuxtjs/eslint-module', '@nuxtjs/markdownit'],
   /*
    ** Build configuration
    */
+  markdownit: {
+    // injected: true,
+
+    preset: 'default',
+    linkify: true,
+    breaks: true
+  },
   build: {
     postcss: {
       plugins: {
@@ -52,5 +61,13 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  generate: {
+    routes: function() {
+      const dataPromise = (resolve, reject) => {
+        resolve(content.projects.map(project => `/${project.slug}`))
+      }
+      return new Promise(dataPromise)
+    }
   }
 }
