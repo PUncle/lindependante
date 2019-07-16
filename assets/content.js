@@ -1,8 +1,8 @@
-const data = {
+export const content = {
   header: {
     greeting: 'Catherine Phillips',
     subtitle:
-      "I'm Catherine Phillips and I'm a Creative Director & Copywriter in International Advertising."
+      "I'm a Creative Director & Copywriter in International Advertising."
   },
   projects: [
     {
@@ -35,6 +35,7 @@ const data = {
     {
       title: 'Intel',
       subtitle: 'Videos',
+      slug: 'intel-videos',
       thumb: 'intelitsjustus_script.gif',
       category: 'video',
       description:
@@ -43,6 +44,7 @@ const data = {
     {
       title: 'National Blood Service',
       subtitle: 'Outdoor',
+      slug: 'national-blood-service-outdoor',
       thumb: 'blooddonor.png',
       category: 'atl',
       description:
@@ -51,6 +53,7 @@ const data = {
     {
       title: 'Piaget',
       subtitle: 'Luxury branding',
+      slug: 'piaget-luxury-branding',
       thumb: 'piagetcover.jpg',
       category: 'atl',
       description:
@@ -59,6 +62,7 @@ const data = {
     {
       title: 'Nissan',
       subtitle: 'TVC',
+      slug: 'nissan-tvc',
       thumb: 'nissanqashqai_tvc2.gif',
       category: 'video',
       description:
@@ -67,6 +71,7 @@ const data = {
     {
       title: 'Moët Champagne',
       subtitle: 'Branding and ooh',
+      slug: 'moet-champagne-branding-and-ooh',
       thumb: 'moet.jpg',
       category: 'atl',
       description:
@@ -75,6 +80,7 @@ const data = {
     {
       title: 'Wonderbra',
       subtitle: 'Augmented reality website',
+      slug: 'wonderbra-augmented-reality-website',
       thumb: 'wonderbra_www.jpg',
       category: 'www',
       description:
@@ -83,6 +89,7 @@ const data = {
     {
       title: 'Garnier',
       subtitle: 'Video and disruptive',
+      slug: 'garnier-video-and-disruptive',
       thumb: 'garnier_colormatch.jpg',
       category: 'atl',
       description:
@@ -91,6 +98,7 @@ const data = {
     {
       title: 'Disneyland',
       subtitle: 'B2B website',
+      slug: 'disneyland-b2b-website',
       thumb: 'dlp_b2b.gif',
       category: 'www',
       description:
@@ -99,6 +107,7 @@ const data = {
     {
       title: 'SkyTeam',
       subtitle: 'Social',
+      slug: 'skyteam-social',
       thumb: 'skyteamborder_fbgame.gif',
       category: 'crm',
       description:
@@ -107,6 +116,7 @@ const data = {
     {
       title: 'Augmented Identity',
       subtitle: 'Posters',
+      slug: 'augmented-identity-posters',
       thumb: 'idemia.jpg',
       category: 'atl',
       description:
@@ -114,5 +124,3 @@ const data = {
     }
   ]
 }
-
-export default data
