@@ -1,6 +1,6 @@
 # laconceptrice
 
-> Work by Catherine Phillips, Creative Director and Copywriter
+> Universal Nuxt.js application showcasing the work of Copywriter and Creative Director, Catherine Phillips
 
 ## Build Setup
 
