@@ -70,10 +70,10 @@ article .inner {
 }
 
 article .img {
-  transition: all 600ms cubic-bezier(0.6, 0.01, 0, 1);
+  transition: all 400ms cubic-bezier(0.6, 0.01, 0, 1);
   backface-visibility: hidden;
   background-size: 100%;
-  background-position: 50% -1000%;
+  background-position: 50% -100%;
   overflow: hidden;
   background-repeat: no-repeat;
 }
