@@ -50,8 +50,4 @@ export default {
 }
 </script>
 
-<style>
-/* .min-height {
-  min-height: 20rem;
-} */
-</style>
+<style></style>
