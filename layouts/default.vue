@@ -32,5 +32,6 @@
   background-color: theme('colors.brandYellow');
   background-image: url(~assets/images/diagonal-stripes.svg);
   background-size: 31rem;
+  overflow-x: hidden;
 }
 </style>
