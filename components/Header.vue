@@ -1,7 +1,12 @@
 <template>
-  <header class="min-height w-full flex lg:w-2/3 xl:w-1/2 mb-4 md:px-2">
+  <header
+    class="min-height w-full flex mb-4 md:px-2"
+    :class="!wide && 'lg:w-2/3 xl:w-1/2'"
+  >
     <div class="min-w-full bg-brandYellow text-white p-4">
-      <h1 class="text-6xl">{{ header.greeting }}</h1>
+      <h1 class="text-6xl">
+        <n-link to="/">{{ header.greeting }}</n-link>
+      </h1>
       <p class="text-brandDBlue">
         {{ header.subtitle }}
       </p>
@@ -14,6 +19,9 @@
 export default {
   name: 'Header',
   props: {
+    wide: {
+      type: Boolean
+    }
     // header: {
     //   type: Object,
     //   required: true,
