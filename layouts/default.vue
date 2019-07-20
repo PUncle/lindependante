@@ -29,6 +29,8 @@
   background-size: 400% 400%;
   animation: Gradient 15s ease infinite; */
   /* background: linear-gradient(theme('colors.brandGreen'), white); */
-  background-color: #222;
+  background-color: theme('colors.brandYellow');
+  background-image: url(~assets/images/diagonal-stripes.svg);
+  background-size: 31rem;
 }
 </style>
