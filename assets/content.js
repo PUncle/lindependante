@@ -1,8 +1,7 @@
 export const content = {
   header: {
     greeting: 'Catherine Phillips',
-    subtitle:
-      "I'm a Creative Director & Copywriter in International Advertising."
+    subtitle: 'Creative Director & Copywriter for International Advertising.'
   },
   projects: [
     {
