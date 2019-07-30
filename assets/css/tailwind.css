@@ -13,9 +13,11 @@ html, body {
   color: #333;
   background-color: theme('colors.brandYellow');
   overflow-x: hidden;
+  /* background-image: url(~assets/images/diagonal-stripes.svg);
+  background-size: 31rem; */
 }
   
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .hline {
   font-family: 'Economica', sans-serif;
   font-weight: 800;
   line-height: 1;
@@ -53,7 +55,7 @@ main.wrapper {
 }
 
 .min-height {
-  min-height: 20rem;
+  /* min-height: 20rem; */
 }
 
 @tailwind components;
@@ -61,19 +63,49 @@ main.wrapper {
 
 /* Page transitions */
 .page-enter-active, .page-leave-active {
-  /* transform-origin: top center 60rem; */
-  transition: all 600ms ease-in-out;
-  /* transform: scale(1); */
-  /* filter: blur(0); */
+  transition: all 800ms ease-in-out;
   filter: hue-rotate(0);
+  transform: translateY(0);
   opacity: 1;
 }
 .page-enter, .page-leave-to {
   opacity: 0;
-  /* transform: scale(1.1); */
-  /* filter: blur(99px); */
-  filter: hue-rotate(1turn);
+  filter: hue-rotate(360deg);
+  transform: translateY(-10px);
 }
+/* .page-enter-active main, .page-leave-active main {
+  transition: all 800ms ease-in-out;
+  filter: hue-rotate(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+.page-enter main, .page-leave-to main {
+  opacity: 0;
+  filter: hue-rotate(360deg);
+  transform: translateY(-10px);
+} */
+/* .page-enter-active, .page-leave-active {
+  opacity: 1;
+  transition: all 1200ms ease-in-out;
+  transform: scale(1);
+  background-size: 31rem !important;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+  transform: scale(1.2);
+  background-size: 41rem !important;
+}
+.page-enter-active main, .page-leave-active main {
+  opacity: 1;
+  transition: all 1200ms ease-in-out;
+  transform: scale(1);
+  background-size: 31rem !important;
+}
+.page-enter main, .page-leave-to main {
+  opacity: 0;
+  transform: scale(0.8);
+  background-size: 41rem !important;
+} */
 
 @media (prefers-reduced-motion: reduce) {
   .page-enter-active, .page-leave-active {
@@ -86,14 +118,14 @@ main.wrapper {
 }
 
 .crm {
-  @apply bg-brandOrange
+  @apply text-brandOrange
 }
 .video {
-  @apply bg-brandGreen
+  @apply text-brandGreen
 }
 .atl {
-  @apply bg-brandPink
+  @apply text-brandPink
 }
 .www {
-  @apply bg-brandBlue
+  @apply text-brandBlue
 }
