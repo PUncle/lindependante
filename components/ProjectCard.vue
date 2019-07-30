@@ -57,7 +57,7 @@ export default {
 
 <style scoped>
 article >>> h2 {
-  font-size: 2.6rem;
+  font-size: 2.2rem;
 }
 
 article h2 span {

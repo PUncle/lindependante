@@ -7,7 +7,7 @@
       <h1 class="text-6xl">
         <n-link to="/">{{ header.greeting }}</n-link>
       </h1>
-      <p class="text-brandDBlue">
+      <p class="text-white text-2xl">
         {{ header.subtitle }}
       </p>
       <p>SOCIAL</p>
