@@ -8,9 +8,10 @@
           class="img bg-gray-900 min-w-full min-h-full"
           :style="`background-image: url(/projects/${slug}/${thumb})`"
         >
-          <div class="copy p-8 min-w-full min-h-full" :class="category">
-            <h2 class="mb-3 font-bold">
-              {{ title }} <span class="text-white">{{ subtitle }}</span>
+          <div class="copy p-8 min-w-full min-h-full bg-white">
+            <span class="text-gray-500 hline">{{ subtitle }}</span>
+            <h2 class="mb-3 mt-0 font-bold" :class="category">
+              {{ title }}
             </h2>
             <p>{{ description }}</p>
           </div>
@@ -56,17 +57,19 @@ export default {
 
 <style scoped>
 article >>> h2 {
-  font-size: 1.6rem;
+  font-size: 2.6rem;
 }
 
 article h2 span {
   font-size: 1.2rem;
   text-transform: lowercase;
-  color: rgb(224, 224, 224);
 }
 
 article .inner {
+  transition: all 400ms ease-in-out;
   background-color: #333;
+  border-width: 10px;
+  border-color: theme('colors.brandYellow');
 }
 
 article .img {
