@@ -2,6 +2,8 @@
 
 > Universal Nuxt.js application showcasing the work of Copywriter and Creative Director, Catherine Phillips
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4149d256-20f0-41bf-8dee-eb538c1d1fe2/deploy-status)](https://app.netlify.com/sites/laconceptrice/deploys)
+
 ## Build Setup
 
 ``` bash
