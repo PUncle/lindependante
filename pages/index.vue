@@ -1,18 +1,20 @@
 <template>
-  <main class="wrapper flex mb-4 flex-wrap justify-start mx-auto">
-    <Header />
-    <ProjectCard
-      v-for="project in projects"
-      :key="project.slug"
-      :title="project.title"
-      :subtitle="project.subtitle"
-      :slug="project.slug"
-      :description="project.description"
-      :thumb="project.thumb"
-      :category="project.category"
-    />
-    <Footer />
-  </main>
+  <div class="wrap md:py-6 md:px-4">
+    <main class="wrapper flex mb-4 flex-wrap justify-start mx-auto">
+      <Header />
+      <ProjectCard
+        v-for="project in projects"
+        :key="project.slug"
+        :title="project.title"
+        :subtitle="project.subtitle"
+        :slug="project.slug"
+        :description="project.description"
+        :thumb="project.thumb"
+        :category="project.category"
+      />
+      <Footer />
+    </main>
+  </div>
 </template>
 
 <script>
@@ -50,4 +52,11 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.wrap {
+  background-color: theme('colors.brandYellow');
+  background-image: url(~assets/images/diagonal-stripes.svg);
+  background-size: 31rem;
+  background-origin: left top;
+}
+</style>

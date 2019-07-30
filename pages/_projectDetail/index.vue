@@ -1,14 +1,16 @@
 <template>
-  <main class="wrapper flex mb-4 flex-wrap justify-start mx-auto">
-    <Header :wide="true" />
-    <article class="min-height w-full flex mb-4 px-2">
-      <div class="min-w-full bg-white text-grey-800 px-4 py-10">
-        <!-- eslint-disable-next-line vue/no-v-html -->
-        <div class="md:w-3/4 xl:w-1/2 m-auto" v-html="content"></div>
-      </div>
-    </article>
-    <Footer />
-  </main>
+  <div class="wrap md:py-6 md:px-4">
+    <main class="wrapper flex mb-4 flex-wrap justify-start mx-auto">
+      <Header :wide="true" />
+      <article class="min-height w-full flex mb-4 px-2">
+        <div class="min-w-full bg-white text-grey-800 px-4 py-10">
+          <!-- eslint-disable-next-line vue/no-v-html -->
+          <div class="md:w-3/4 xl:w-1/2 m-auto" v-html="content"></div>
+        </div>
+      </article>
+      <Footer />
+    </main>
+  </div>
 </template>
 
 <script>
@@ -25,6 +27,27 @@ export default {
       project: this.$store.state.projects.projects.filter(
         project => project.slug === this.$route.params.projectDetail
       )[0]
+    }
+  },
+  head() {
+    // const host = req ? req.headers.host : window.location.host.split(':')[0]
+    return {
+      title: this.project.title,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          property: 'og:title',
+          content: `${this.project.title} ${this.project.subtitle}`
+        },
+        {
+          property: 'og:description',
+          content: `${this.project.description}`.replace(/<\/?[^>]+(>|$)/g, '')
+        },
+        {
+          property: 'og:image',
+          content: `${this.project.thumb}`
+        }
+      ]
     }
   },
 
